@@ -6,14 +6,15 @@ hostname=j1.pupuapi.com
 */
 
 let obj=JSON.parse($response.body);
+const matchCount = 2;
 let count = 0;
-obj.data.forEach(item => {
+for (const item of obj.data) {
   if (item.image_width === 1080) {
     item.img_url = null;
     count++;
-    if (count === 2) {
-      return false;
-    }
   }
-});
+  if (count === matchCount){
+    break;
+  }
+}
 $done({body: JSON.stringify(obj)});
