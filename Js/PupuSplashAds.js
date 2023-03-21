@@ -9,7 +9,6 @@ let obj=JSON.parse($response.body);
 for (const item of obj.data) {
   if (item.position_type === 50) {
     item.img_url = null;
-    break;
   }
 }
 $done({body: JSON.stringify(obj)});
