@@ -1,7 +1,7 @@
 /*
 # By LimeAroma
 # 圈x远程引用
-^https^http:\/\/iqushangwang\.8quan\.com\/index\.php\/i\/index\/index url script-response-body https://raw.githubusercontent.com/LimeAroma/Script/main/Js/QuDa.js
+^http:\/\/iqushangwang\.8quan\.com\/index\.php\/i\/index\/index url script-response-body https://raw.githubusercontent.com/LimeAroma/Script/main/Js/QuDa.js
 */
 
 var body = $response.body;
