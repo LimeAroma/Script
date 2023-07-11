@@ -1,6 +1,6 @@
 var body = $response.body;
 
-var replacements = new Map([
+var replacements = [
     [/\"vip\":\w+/g, '\"vip":true'],
     [/\"svip_mechanism\":\d+/g, '\"svip_mechanism":1'],
     [/\"is_life_artist\":\w+/g, '\"is_life_artist":true'],
@@ -13,10 +13,10 @@ var replacements = new Map([
     [/\"be_follow_count\":\d+/g, '\"be_follow_count":1000000'],
     [/\"follow_count\":\d+/g, '\"follow_count":1000000'],
     [/\"score\":\d+/g, '\"score":1000000']
-]);
+];
 
-replacements.forEach((value, regex) => {
-    body = body.replace(regex, value);
+replacements.forEach(([regex, replacement]) => {
+    body = body.replace(regex, replacement);
 });
 
 $done({body});
